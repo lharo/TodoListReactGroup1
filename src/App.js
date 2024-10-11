@@ -4,6 +4,7 @@ import Header from './components/Header';
 import { useState, useEffect } from 'react'
 import TodoList from './components/TodoList';
 import TodoList2 from './components/TodoList2';
+import TodoList3 from './components/TodoList3';
 
 const App = () => {
 
@@ -23,8 +24,9 @@ const App = () => {
 
   return (
     <div>
-      <TodoList></TodoList>
+      {/* <TodoList></TodoList> */}
       <TodoList2></TodoList2>
+      <TodoList3 />
       {/* <ul>
 
       {
