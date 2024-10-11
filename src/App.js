@@ -1,23 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import { useState, useEffect } from 'react'
+import TodoList from './components/TodoList';
+import TodoList2 from './components/TodoList2';
 
-function App() {
+const App = () => {
+
+  // let count = 0;
+  const [list, setList] = useState([1,2,3]);
+  const [inputValue, setInputValue] = useState('')
+
+  useEffect(() => {
+    console.log("Se creo el componente")
+  }, [])
+
+
+  
+  // useEffect(() => {
+  //   console.log("Se actualizo el contador")
+  // }, [count])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TodoList></TodoList>
+      <TodoList2></TodoList2>
+      {/* <ul>
+
+      {
+        list.map((todo) => ((
+          <li>{todo}</li>
+        )))
+      }
+      </ul>
+      <button onClick={
+        () => setList([
+          ...list,
+          1,2,3
+        ])
+      }>Vaciar Lista</button>
+
+      <input
+        type='text'
+        value={inputValue}
+        onChange={ (e) => setInputValue(e.target.value) }
+      /> */}
+
+      {/* <h1>{count}</h1>
+      <button onClick={() => {
+        setCount(count + 1)
+        console.log('count', count)
+      }}> + </button>
+      <button onClick={() => {
+        setCount(count - 1)
+        console.log('count', count)
+      }}> - </button> */}
     </div>
   );
 }
